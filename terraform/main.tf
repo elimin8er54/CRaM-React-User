@@ -1,7 +1,18 @@
+variable "AWS_ACCESS_KEY" {
+  description = "The username for the DB master user"
+  type        = string
+  sensitive = true
+}
+variable "AWS_SECRET_KEY" {
+  description = "The password for the DB master user"
+  type        = string
+  sensitive = true
+}
+
 provider "aws" {
   region     = "us-east-2"
-  access_key = AWS_ACCESS_KEY
-  secret_key = AWS_SECRET_KEY
+  access_key = var.AWS_ACCESS_KEY
+  secret_key = var.AWS_SECRET_KEY
 }
 
 resource "aws_s3_bucket" "b" {

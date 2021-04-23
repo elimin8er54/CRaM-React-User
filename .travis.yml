@@ -10,7 +10,7 @@ before_install:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: bash deploy.sh
+  script: bash deploy.sh -var AWS_ACCESS_KEY=$AWS_ACCESS_KEY AWS_SECRET_KEY=$AWS_SECRET_KEY
   on:
     branch: main
 after_success:
