@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#set -o errexit -o nounset
+set -o errexit -o nounset
 
-#cd terraform
+cd terraform
 
-#terraform plan
+terraform plan
 
-#terraform apply
+terraform apply
