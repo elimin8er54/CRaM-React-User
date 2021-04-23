@@ -10,5 +10,7 @@ deploy:
   secret_access_key: AWS_SECRET_KEY
   bucket: "CRM-React"
   skip_cleanup: true
+  local_dir: public
+  region: us-east-2
   on:
     branch: main
