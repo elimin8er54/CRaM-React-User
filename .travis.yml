@@ -1,6 +1,14 @@
 language: node_js
 node_js:
   - 12
+  # Install terraform
+before_install:
+  - curl -sLo /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.8.8/terraform_0.8.8_linux_amd64.zip
+  - unzip /tmp/terraform.zip -d /tmp
+  - mv /tmp/terraform ~/bin
+  - export PATH="~/bin:$PATH"
+  on:
+    branch: main
 deploy:
 - provider: script
   skip_cleanup: true
@@ -12,7 +20,7 @@ deploy:
   secret_access_key: AWS_SECRET_KEY
   bucket: "CRM-React"
   skip_cleanup: true
-  local_dir: public
+  local_dir: dist
   region: us-east-2
   on:
     branch: main
