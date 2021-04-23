@@ -7,8 +7,6 @@ before_install:
   - unzip /tmp/terraform.zip -d /tmp
   - mv /tmp/terraform ~/bin
   - export PATH="~/bin:$PATH"
-  on:
-    branch: main
 deploy:
 - provider: script
   skip_cleanup: true
