@@ -15,6 +15,24 @@ provider "aws" {
   secret_key = var.secretkey
 }
 
+/*
+resource "aws_s3_bucket" "state" {
+  bucket = "crm-react-state"
+  acl    = "private"
+
+  tags = {
+    Name = "React-CRM-Bucket-State"
+  }
+}
+*/
+terraform {
+  backend "s3" {
+    bucket = "crm-react-state"
+    key    = "terraform.tfstat"
+    region = "us-east-2"
+  }
+}
+
 resource "aws_s3_bucket" "b" {
   bucket = "crm-react"
   acl    = "private"
