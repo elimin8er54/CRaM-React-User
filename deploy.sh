@@ -8,9 +8,9 @@ set -o errexit -o nounset
 
 cd terraform
 
-terraform import aws_s3_bucket.b crm-react
-
 terraform init
+
+terraform import aws_s3_bucket.b crm-react
 
 terraform plan
 
