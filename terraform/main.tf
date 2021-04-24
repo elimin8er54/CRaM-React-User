@@ -16,7 +16,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "b" {
-  bucket = "CRM-React"
+  bucket = "crm-react"
   acl    = "private"
 
   tags = {
