@@ -13,14 +13,13 @@ deploy:
   script: bash deploy.sh -var AWS_ACCESS_KEY=$AWS_ACCESS_KEY AWS_SECRET_KEY=$AWS_SECRET_KEY
   on:
     branch: main
-after_success:
-  deploy:
-  - provider: s3
-    access_key_id: AWS_ACCESS_KEY
-    secret_access_key: AWS_SECRET_KEY
-    bucket: "crm-react"
-    skip_cleanup: true
-    local_dir: dist
-    region: us-east-2
-    on:
-      branch: main
+deploy:
+- provider: s3
+  access_key_id: AWS_ACCESS_KEY
+  secret_access_key: AWS_SECRET_KEY
+  bucket: "crm-react"
+  skip_cleanup: true
+  local_dir: dist
+  region: us-east-2
+  on:
+    branch: main
