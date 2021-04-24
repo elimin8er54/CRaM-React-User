@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "The user section of the React SPA",
   "scripts": {
-    "build": "npm run test && tsc -p src && webpack --mode production",
+    "build": "tsc -p src && webpack --mode production",
     "start": "npm run build",
     "client": "tsc -p src",
     "dev": "cross-env NODE_ENV=development && webpack-dev-server --mode=development && npm run client",
-    "test": "jest",
-    "deploy": "build && aws s3 sync dist/ s3://example-bucket --acl public-read"
+    "test": "jest && npm run build"
   },
   "author": "Shaunt Keshishian",
   "dependencies": {

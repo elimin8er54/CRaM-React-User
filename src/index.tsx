@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Body from "./components/Body";
-import Login from "./components/Body/Login";
+import Login from "./components/body/Login";
 import ScrollToTop from "./wrappers/ScrollToTop";
 import TokenCheck from "./wrappers/TokenCheck";
 import styles from "./styles.scss";
