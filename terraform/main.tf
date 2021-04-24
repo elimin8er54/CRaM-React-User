@@ -1,4 +1,4 @@
-/*variable "accesskey" {
+variable "accesskey" {
   description = "The access for the AWS Admin user"
   type        = string
   sensitive = true
@@ -7,7 +7,7 @@ variable "secretkey" {
   description = "The secret for the AWS Admin user"
   type        = string
   sensitive = true
-}*/
+}
 
 provider "aws" {
   region     = "us-east-2"
