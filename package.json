@@ -7,7 +7,7 @@
     "start": "npm run build",
     "client": "tsc -p src",
     "dev": "cross-env NODE_ENV=development && webpack-dev-server --mode=development && npm run client",
-    "test": "jest && build"
+    "test": "jest && npm run build"
   },
   "author": "Shaunt Keshishian",
   "dependencies": {
