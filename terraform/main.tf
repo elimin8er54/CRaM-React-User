@@ -11,8 +11,8 @@ variable "AWS_SECRET_KEY" {
 
 provider "aws" {
   region     = "us-east-2"
-  access_key = var.AWS_ACCESS_KEY
-  secret_key = var.AWS_SECRET_KEY
+  access_key = var.accesskey
+  secret_key = var.secretkey
 }
 
 resource "aws_s3_bucket" "b" {
