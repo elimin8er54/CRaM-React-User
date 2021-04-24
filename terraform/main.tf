@@ -1,10 +1,10 @@
 variable "AWS_ACCESS_KEY" {
-  description = "The username for the DB master user"
+  description = "The access for the AWS Admin user"
   type        = string
   sensitive = true
 }
 variable "AWS_SECRET_KEY" {
-  description = "The password for the DB master user"
+  description = "The secret for the AWS Admin user"
   type        = string
   sensitive = true
 }

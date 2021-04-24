@@ -3,7 +3,7 @@ node_js:
   - 12
   # Install terraform
 before_install:
-  - curl -sLo /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.8.8/terraform_0.8.8_linux_amd64.zip
+  - curl -sLo /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip
   - unzip /tmp/terraform.zip -d /tmp
   - mv /tmp/terraform ~/bin
   - export PATH="~/bin:$PATH"
