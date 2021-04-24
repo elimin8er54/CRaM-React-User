@@ -8,9 +8,7 @@ set -o errexit -o nounset
 
 cd terraform
 
-terraform init
-
-terraform import aws_s3_bucket.b crm-react
+terraform init -backend-config="access_key=$AWS_ACCESS_KEY" -backend-config="secret_key=$AWS_SECRET_KEY"
 
 terraform plan
 
